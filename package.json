@@ -1,0 +1,40 @@
+{
+  "name": "wordcut",
+  "description": "Thai word breaker for Node.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/veer66/wordcut",
+  "author": {
+    "name": "Vee Satayamas",
+    "email": "vsatayamas@gmail.com"
+  },
+  "contributors": [
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/veer66/wordcut.git"
+  },
+  "bugs": {
+    "url": "https://github.com/veer66/wordcut/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "main": "lib/wordcut.js",
+  "files": [
+    "data/tdict-std.txt"
+  ],
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "keywords": [
+    "word",
+    "thai",
+    "segmentation",
+    "break",
+    "boundary"
+  ],
+  "dependencies": {}
+}
