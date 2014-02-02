@@ -18,8 +18,8 @@
   },
   "licenses": [
     {
-      "type": "MIT",
-      "url": "http://opensource.org/licenses/MIT"
+      "type": "LGPL",
+      "url": "http://www.gnu.org/licenses/lgpl.html"
     }
   ],
   "main": "lib/wordcut.js",
