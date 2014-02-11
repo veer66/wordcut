@@ -17,7 +17,6 @@ Usage
 
 ```javascript
 var wordcut = require("wordcut");
-var fs = require("fs");
 
 wordcut.init();
 console.log(wordcut.cut("กากา"));
