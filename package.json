@@ -25,7 +25,7 @@
   "main": "lib/wordcut.js",
   "files": [
     "data/tdict-std.txt",
-    "lib/wordcut.js"
+    "lib/*.js"
   ],
   "engines": {
     "node": ">= 0.10.0"
@@ -38,7 +38,6 @@
     "boundary"
   ],
   "dependencies": {
-    "underscore": "*",
     "chai": "*",
     "mocha": "*"
   }
