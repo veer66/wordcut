@@ -15,7 +15,6 @@ describe("Wordcut", function() {
 
   it("should segment text with English word", function() {
     var segmentedResult = wordcut.cut("กาDogมี");
-    console.log(segmentedResult);
     expect(segmentedResult).to.deep.equal("กา|Dog|มี")
   });
 
