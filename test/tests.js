@@ -18,4 +18,9 @@ describe("Wordcut", function() {
     expect(segmentedResult).to.deep.equal("กา|Dog|มี")
   });
 
+  it("should segment text with English word and space", function() {
+    var segmentedResult = wordcut.cut("กา Dog มี");
+    expect(segmentedResult).to.deep.equal("กา| |Dog| |มี")
+  });
+
 });
