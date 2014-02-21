@@ -23,4 +23,10 @@ describe("Wordcut", function() {
     expect(segmentedResult).to.deep.equal("กา| |Dog| |มี")
   });
 
+  
+  it("should split obvious pattern เหน็ด", function() {
+    var segmentedResult = wordcut.cut("เหน็ด");
+    expect(segmentedResult).to.deep.equal("เหน็ด")
+  });
+
 });
