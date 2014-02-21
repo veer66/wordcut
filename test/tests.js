@@ -29,9 +29,14 @@ describe("Wordcut", function() {
     expect(segmentedResult).to.deep.equal("เหน็ด")
   });
 
-  it("should split obvious pattern เหน็ด", function() {
+  it("should split obvious pattern เด้", function() {
     var segmentedResult = wordcut.cut("เด้");
-    expect(segmentedResult).to.deep.equal("เด้")
+    expect(segmentedResult).to.deep.equal("เด้");
+  });
+
+  it("should split มั้ย", function() {
+    var segmentedResult = wordcut.cut("มั้ย");
+    expect(segmentedResult).to.deep.equal("มั้ย");
   });
 
 });
