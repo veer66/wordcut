@@ -39,4 +39,9 @@ describe("Wordcut", function() {
     expect(segmentedResult).to.deep.equal("มั้ย");
   });
 
+  it("should split เชียง", function() {
+    var segmentedResult = wordcut.cut("เชียง");
+    expect(segmentedResult).to.deep.equal("เชียง");
+  });
+
 });
