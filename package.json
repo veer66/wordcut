@@ -1,7 +1,7 @@
 {
   "name": "wordcut",
   "description": "Thai word breaker for Node.js",
-  "version": "0.0.8",
+  "version": "0.6.1",
   "homepage": "https://github.com/veer66/wordcut",
   "author": {
     "name": "Vee Satayamas",
