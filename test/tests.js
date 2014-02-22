@@ -59,4 +59,9 @@ describe("Wordcut", function() {
     expect(segmentedResult).to.deep.equal("ง่วง");
   });
 
+  it("should not split ไพลิน", function() {
+    var segmentedResult = wordcut.cut("ไพลิน");
+    expect(segmentedResult).to.deep.equal("ไพ|ลิน");
+  });
+
 });
