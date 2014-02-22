@@ -49,4 +49,9 @@ describe("Wordcut", function() {
     expect(segmentedResult).to.deep.equal("แม่ง");
   });
 
+  it("should split ชาก", function() {
+    var segmentedResult = wordcut.cut("ชาก");
+    expect(segmentedResult).to.deep.equal("ชาก");
+  });
+
 });
