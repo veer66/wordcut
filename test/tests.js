@@ -44,4 +44,9 @@ describe("Wordcut", function() {
     expect(segmentedResult).to.deep.equal("เชียง");
   });
 
+  it("should split แม่ง", function() {
+    var segmentedResult = wordcut.cut("แม่ง");
+    expect(segmentedResult).to.deep.equal("แม่ง");
+  });
+
 });
