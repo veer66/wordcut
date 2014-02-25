@@ -1,13 +1,23 @@
 #!/usr/bin/env node
 var readline = require("readline")
-  , wordcut = require("../");
+  , wordcut = require("../")
+	, dictPath;
+
+process.argv.slice(2).forEach(function(arg) {
+	var m = arg.match(/--dict=(.+)/);
+	if (m) 
+		dictPath = m[1];
+});
 
 var rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
 
-wordcut.init();
+if (dictPath)
+	wordcut.init(dictPath);
+else
+	wordcut.init();
 
 rl.on("line", function(line) {  
   console.log(wordcut.cut(line, " "));
