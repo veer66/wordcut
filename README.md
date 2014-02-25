@@ -22,6 +22,14 @@ wordcut.init();
 console.log(wordcut.cut("กากา"));
 ```
 
+### Command line interface
+
+```
+npm install -g wordcut
+worcut < input_file > output_file
+```
+
+
 Development
 -----------
 
