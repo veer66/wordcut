@@ -74,5 +74,9 @@ describe("Wordcut", function() {
     expect(segmentedResult).to.deep.equal("dog|/|cat");
   });
 
+  it("should split dash", function() {
+    var segmentedResult = wordcut.cut("รับ-ส่ง");
+    expect(segmentedResult).to.deep.equal("รับ|-|ส่ง");
+  });
 
 });
