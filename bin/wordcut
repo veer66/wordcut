@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+var readline = require("readline")
+  , wordcut = require("../");
+
+var rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+wordcut.init();
+
+rl.on("line", function(line) {  
+  console.log(wordcut.cut(line, " "));
+});

@@ -23,9 +23,13 @@
     }
   ],
   "main": "lib/wordcut.js",
+  "bin": {
+    "wordcut": "./bin/wordcut"
+  },
   "files": [
     "data/tdict-std.txt",
-    "lib/*.js"
+    "lib/*.js",
+    "bin"
   ],
   "engines": {
     "node": ">= 0.10.0"
