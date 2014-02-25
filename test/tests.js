@@ -69,4 +69,10 @@ describe("Wordcut", function() {
     expect(segmentedResult).to.deep.equal("(|test|)");
   });
 
+  it("should split slash", function() {
+    var segmentedResult = wordcut.cut("dog/cat");
+    expect(segmentedResult).to.deep.equal("dog|/|cat");
+  });
+
+
 });
