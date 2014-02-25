@@ -78,5 +78,9 @@ describe("Wordcut", function() {
     var segmentedResult = wordcut.cut("รับ-ส่ง");
     expect(segmentedResult).to.deep.equal("รับ|-|ส่ง");
   });
+  it("should not split เตอร์", function() {
+    var segmentedResult = wordcut.cut("เตอร์");
+    expect(segmentedResult).to.deep.equal("เตอร์");
+  });
 
 });
