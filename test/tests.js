@@ -64,4 +64,9 @@ describe("Wordcut", function() {
     expect(segmentedResult).to.deep.equal("ไพ|ลิน");
   });
 
+  it("should split parenthesis", function() {
+    var segmentedResult = wordcut.cut("(test)");
+    expect(segmentedResult).to.deep.equal("(|test|)");
+  });
+
 });
