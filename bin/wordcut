@@ -1,12 +1,19 @@
 #!/usr/bin/env node
 var readline = require("readline")
   , wordcut = require("../")
-	, dictPath;
+	, dictPath
+    , delim;
 
 process.argv.slice(2).forEach(function(arg) {
-	var m = arg.match(/--dict=(.+)/);
-	if (m) 
-		dictPath = m[1];
+  var m = arg.match(/--dict=(.+)/);
+  if (m) {
+	dictPath = m[1];
+  }
+  
+  var mDelim = arg.match(/--delim=(.+)/);
+  if (mDelim) {
+    delim = mDelim[1];
+  } 
 });
 
 var rl = readline.createInterface({
@@ -19,6 +26,9 @@ if (dictPath)
 else
 	wordcut.init();
 
+if (!delim) 
+  delim = " "
+
 rl.on("line", function(line) {  
-  console.log(wordcut.cut(line, " "));
+  console.log(wordcut.cut(line, delim));
 });
