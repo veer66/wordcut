@@ -83,4 +83,19 @@ describe("Wordcut", function() {
     expect(segmentedResult).to.deep.equal("เตอร์");
   });
 
+  it("should not split เตอร์", function() {
+    var segmentedResult = wordcut.cut("เตอร์");
+    expect(segmentedResult).to.deep.equal("เตอร์");
+  });
+
+
+  it("should not split energy energy", function() {
+    var segmentedResult = wordcut.cut("energy");
+    expect(segmentedResult).to.deep.equal("energy");
+    var segmentedResult = wordcut.cut("energy");
+    expect(segmentedResult).to.deep.equal("energy");
+
+  });
+
+
 });
