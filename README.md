@@ -29,6 +29,9 @@ npm install -g wordcut
 worcut < input_file > output_file
 ```
 
+#### Options
+* --delim
+* --dict
 
 Development
 -----------
