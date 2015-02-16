@@ -37,6 +37,9 @@ worcut < input_file > output_file
 
     node server.js
 
+#### Trying Web API
+
+    curl -X POST --data-binary '{"line":"กากา"}' http://localhost:8882/segment
 Development
 -----------
 
