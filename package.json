@@ -44,6 +44,7 @@
   "dependencies": {
     "chai": "*",
     "mocha": "*",
-    "underscore": "*"
+    "underscore": "*",
+    "body": "*"
   }
 }
