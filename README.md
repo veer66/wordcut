@@ -33,6 +33,10 @@ worcut < input_file > output_file
 * --delim
 * --dict
 
+### Web API
+
+    node server.js
+
 Development
 -----------
 
