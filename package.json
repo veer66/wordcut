@@ -27,7 +27,7 @@
     "wordcut": "./bin/wordcut"
   },
   "files": [
-    "data/tdict-std.txt",
+    "data/tdict-*.txt",
     "lib/*.js",
     "bin"
   ],
