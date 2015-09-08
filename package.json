@@ -46,5 +46,8 @@
     "mocha": "*",
     "underscore": "*",
     "body": "*"
+  },
+  "scripts":{
+    "test": "mocha test"
   }
 }
