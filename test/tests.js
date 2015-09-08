@@ -3,15 +3,15 @@ var expect = require("chai").expect
   , wordcut = require("../lib/wordcut");
 
 describe("Wordcut", function() {
-  
+
   beforeEach(function() {
     wordcut.init();
   });
-  
+
   it("should segment a simple word", function() {
     expect(wordcut.cut("กากา")).to.deep.equal("กา|กา")
   });
-  
+
 
   it("should segment text with English word", function() {
     var segmentedResult = wordcut.cut("กาDogมี");
@@ -23,7 +23,7 @@ describe("Wordcut", function() {
     expect(segmentedResult).to.deep.equal("กา| |Dog| |มี")
   });
 
-  
+
   it("should split obvious pattern เหน็ด", function() {
     var segmentedResult = wordcut.cut("เหน็ด");
     expect(segmentedResult).to.deep.equal("เหน็ด")
@@ -61,7 +61,7 @@ describe("Wordcut", function() {
 
   it("should not split ไพลิน", function() {
     var segmentedResult = wordcut.cut("ไพลิน");
-    expect(segmentedResult).to.deep.equal("ไพ|ลิน");
+    expect(segmentedResult).to.deep.equal("ไพลิน");
   });
 
   it("should split parenthesis", function() {
@@ -95,6 +95,11 @@ describe("Wordcut", function() {
     var segmentedResult = wordcut.cut("energy");
     expect(segmentedResult).to.deep.equal("energy");
 
+  });
+
+  it("should split into array", function(){
+    var segmentedResult = wordcut.cutIntoArray("ฉันชอบกินข้าว");
+    expect(segmentedResult).to.deep.equal(["ฉัน","ชอบ","กิน","ข้าว"])
   });
 
 
