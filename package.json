@@ -7,8 +7,7 @@
     "name": "Vee Satayamas",
     "email": "vsatayamas@gmail.com"
   },
-  "contributors": [
-  ],
+  "contributors": [],
   "repository": {
     "type": "git",
     "url": "git://github.com/veer66/wordcut.git"
@@ -42,12 +41,13 @@
     "boundary"
   ],
   "dependencies": {
+    "body": "*",
     "chai": "*",
+    "glob": "^5.0.14",
     "mocha": "*",
-    "underscore": "*",
-    "body": "*"
+    "underscore": "*"
   },
-  "scripts":{
+  "scripts": {
     "test": "mocha test"
   }
 }
