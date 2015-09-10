@@ -23,6 +23,11 @@ describe("Wordcut", function() {
     expect(segmentedResult).to.deep.equal("กา| |Dog| |มี")
   });
 
+  it("should segment text with English word and repeated space", function() {
+    var segmentedResult = wordcut.cut("NO BREAK SPACES        IS HERE นะครับ");
+    expect(segmentedResult).to.deep.equal("NO| |BREAK| |SPACES|        |IS| |HERE| |นะ|ครับ")
+  });
+
 
   it("should split obvious pattern เหน็ด", function() {
     var segmentedResult = wordcut.cut("เหน็ด");
