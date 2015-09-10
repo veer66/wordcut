@@ -22,6 +22,13 @@ wordcut.init();
 console.log(wordcut.cut("กากา"));
 ```
 
+With additional custom dictionary
+
+```javascript
+//see test/test_customdict.js
+wordcut.init([customdict/*.txt],true);
+```
+
 ### Command line interface
 
 ```

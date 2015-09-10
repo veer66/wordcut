@@ -7,8 +7,7 @@
     "name": "Vee Satayamas",
     "email": "vsatayamas@gmail.com"
   },
-  "contributors": [
-  ],
+  "contributors": [],
   "repository": {
     "type": "git",
     "url": "git://github.com/veer66/wordcut.git"
@@ -27,7 +26,7 @@
     "wordcut": "./bin/wordcut"
   },
   "files": [
-    "data/tdict-std.txt",
+    "data/tdict-*.txt",
     "lib/*.js",
     "bin"
   ],
@@ -42,9 +41,13 @@
     "boundary"
   ],
   "dependencies": {
+    "body": "*",
     "chai": "*",
+    "glob": "^5.0.14",
     "mocha": "*",
-    "underscore": "*",
-    "body": "*"
+    "underscore": "*"
+  },
+  "scripts": {
+    "test": "mocha test"
   }
 }
