@@ -28,6 +28,10 @@ describe("Wordcut", function() {
     expect(segmentedResult).to.deep.equal("NO| |BREAK| |SPACES|        |IS| |HERE| |นะ|ครับ")
   });
 
+  it("should segment string with at sign", function(){
+    var segmentedResult = wordcut.cut('ฉัน @รัก@ เธอมาก@mai@จริง')
+    expect(segmentedResult).to.deep.equal('')
+  });
 
   it("should split obvious pattern เหน็ด", function() {
     var segmentedResult = wordcut.cut("เหน็ด");
