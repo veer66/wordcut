@@ -30,7 +30,7 @@ describe("Wordcut", function() {
 
   it("should segment string with at sign", function(){
     var segmentedResult = wordcut.cut('ฉัน @รัก@ เธอมาก@mai@จริง')
-    expect(segmentedResult).to.deep.equal('')
+    expect(segmentedResult).to.deep.equal('ฉัน| |@|รัก|@| |เธอ|มาก|@|mai|@|จริง')
   });
 
   it("should split obvious pattern เหน็ด", function() {
