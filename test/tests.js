@@ -21,6 +21,21 @@ describe("Wordcut", function() {
     expect(segmentedResult).to.deep.equal("กา|Dog|มี")
   });
 
+  it("should segment thai word with parenthesis", function() {
+    var segmentedResult = wordcut.cut("อยู่ใน(วงเล็บ)");
+    expect(segmentedResult).to.deep.equal("อยู่|ใน|(|วงเล็บ|)")
+  });
+
+  it("should segment english word with quotes", function() {
+    var segmentedResult = wordcut.cut("ลอง\"prt\"");
+    expect(segmentedResult).to.deep.equal("ลอง|\"|prt|\"")
+  });
+
+  it("should segment english word with prime", function() {
+    var segmentedResult = wordcut.cut("ลอง`prt`");
+    expect(segmentedResult).to.deep.equal("ลอง|`|prt|`")
+  });
+
   it("should segment text with English word and space", function() {
     var segmentedResult = wordcut.cut("กา Dog มี");
     expect(segmentedResult).to.deep.equal("กา| |Dog| |มี")
