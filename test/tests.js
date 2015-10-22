@@ -121,7 +121,11 @@ describe("Wordcut", function() {
     expect(segmentedResult).to.deep.equal("energy");
     var segmentedResult = wordcut.cut("energy");
     expect(segmentedResult).to.deep.equal("energy");
+  });
 
+  it("should split dot", function(){
+    var segmentedResult = wordcut.cut("energy.");
+    expect(segmentedResult).to.deep.equal("energy|.");   
   });
 
   it("should split into array", function(){
