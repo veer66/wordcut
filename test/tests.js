@@ -12,10 +12,28 @@ describe("Wordcut", function() {
     expect(wordcut.cut("กากา")).to.deep.equal("กา|กา")
   });
 
+  it("should segment a word the number", function() {
+    expect(wordcut.cut("กา2ตัว")).to.deep.equal("กา|2|ตัว")
+  });
 
   it("should segment text with English word", function() {
     var segmentedResult = wordcut.cut("กาDogมี");
     expect(segmentedResult).to.deep.equal("กา|Dog|มี")
+  });
+
+  it("should segment thai word with parenthesis", function() {
+    var segmentedResult = wordcut.cut("อยู่ใน(วงเล็บ)");
+    expect(segmentedResult).to.deep.equal("อยู่|ใน|(|วงเล็บ|)")
+  });
+
+  it("should segment english word with quotes", function() {
+    var segmentedResult = wordcut.cut("ลอง\"prt\"");
+    expect(segmentedResult).to.deep.equal("ลอง|\"|prt|\"")
+  });
+
+  it("should segment english word with prime", function() {
+    var segmentedResult = wordcut.cut("ลอง`prt`");
+    expect(segmentedResult).to.deep.equal("ลอง|`|prt|`")
   });
 
   it("should segment text with English word and space", function() {
@@ -23,6 +41,15 @@ describe("Wordcut", function() {
     expect(segmentedResult).to.deep.equal("กา| |Dog| |มี")
   });
 
+  it("should segment text with English word and repeated space", function() {
+    var segmentedResult = wordcut.cut("NO BREAK SPACES        IS HERE นะครับ");
+    expect(segmentedResult).to.deep.equal("NO| |BREAK| |SPACES|        |IS| |HERE| |นะ|ครับ")
+  });
+
+  it("should segment string with at sign", function(){
+    var segmentedResult = wordcut.cut('ฉัน @รัก@ เธอมาก@mai@จริง')
+    expect(segmentedResult).to.deep.equal('ฉัน| |@|รัก|@| |เธอ|มาก|@|mai|@|จริง')
+  });
 
   it("should split obvious pattern เหน็ด", function() {
     var segmentedResult = wordcut.cut("เหน็ด");
@@ -94,7 +121,11 @@ describe("Wordcut", function() {
     expect(segmentedResult).to.deep.equal("energy");
     var segmentedResult = wordcut.cut("energy");
     expect(segmentedResult).to.deep.equal("energy");
+  });
 
+  it("should split dot", function(){
+    var segmentedResult = wordcut.cut("energy.");
+    expect(segmentedResult).to.deep.equal("energy|.");   
   });
 
   it("should split into array", function(){
