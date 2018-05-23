@@ -33,7 +33,7 @@ wordcut.init([customdict/*.txt],true);
 
 ```
 npm install -g wordcut
-wordcut < input_file > output_file
+echo 'กากากา' | wordcut
 ```
 
 #### Options
