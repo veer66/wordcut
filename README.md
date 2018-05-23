@@ -33,7 +33,7 @@ wordcut.init([customdict/*.txt],true);
 
 ```
 npm install -g wordcut
-worcut < input_file > output_file
+wordcut < input_file > output_file
 ```
 
 #### Options
