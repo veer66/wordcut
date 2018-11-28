@@ -42,15 +42,15 @@
   ],
   "dependencies": {
     "body": "*",
-    "chai": "*",
     "glob": "^5.0.14",
-    "mocha": "*",
     "underscore": "*"
   },
   "scripts": {
     "test": "mocha test"
   },
   "devDependencies": {
+    "mocha": "*",
+    "chai": "*",
     "brfs": "^1.4.1",
     "browserify": "^11.2.0",
     "del": "^2.0.2",
