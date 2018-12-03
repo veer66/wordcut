@@ -133,5 +133,4 @@ describe("Wordcut", function() {
     expect(segmentedResult).to.deep.equal(["ฉัน","ชอบ","กิน","ข้าว"])
   });
 
-
 });
