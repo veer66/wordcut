@@ -38,5 +38,5 @@ var rl = readline.createInterface({
 });
 
 rl.on("line", function(line) {  
-  console.log(wordcut.cut(line, delim, trspace));
+  console.log(wordcut.cut(line.replace("ํา", "ำ"), delim, trspace));
 });
