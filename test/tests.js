@@ -115,7 +115,6 @@ describe("Wordcut", function() {
     expect(segmentedResult).to.deep.equal("เตอร์");
   });
 
-
   it("should not split energy energy", function() {
     var segmentedResult = wordcut.cut("energy");
     expect(segmentedResult).to.deep.equal("energy");
@@ -132,5 +131,16 @@ describe("Wordcut", function() {
     var segmentedResult = wordcut.cutIntoArray("ฉันชอบกินข้าว");
     expect(segmentedResult).to.deep.equal(["ฉัน","ชอบ","กิน","ข้าว"])
   });
+
+  it("should split โอโห", function() {
+    var segmentedResult = wordcut.cut("โอโห");
+    expect(segmentedResult).to.deep.equal("โอ|โห");
+  });
+
+  it("should split โอ้โห", function() {
+    var segmentedResult = wordcut.cut("โอ้โห");
+    expect(segmentedResult).to.deep.equal("โอ้|โห");
+  });
+  
 
 });
