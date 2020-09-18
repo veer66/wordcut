@@ -51,3 +51,5 @@ Development
 -----------
 
 * Explanation in Thai about version 0.0.3 http://veer66.wordpress.com/2014/02/19/wordcut2014/
+
+
